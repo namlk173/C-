@@ -19,10 +19,11 @@ void sap_xep_noi_bot(int a[], int n){
 			}
 		}
 		if(!is_swap){
-			cout<<"Buoc "<<step++<<": ";
-			in(a, n);
+//			cout<<"Buoc "<<step++<<": ";
+//			in(a, n);
 			break;	
-		} else {
+		}
+		else {
 			cout<<"Buoc "<<step++<<": ";
 			in(a, n);
 		}

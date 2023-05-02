@@ -10,6 +10,12 @@ void Init(int k){
 	}
 }
 
+void in(int a[], int k){
+	for(int i=0; i<k; i++){
+		cout<<a[i];
+	}
+	cout<<" ";
+}
 
 void sinh_tap_con_ke_tiep(int a[], int n, int k){
 	int i = k-1;
