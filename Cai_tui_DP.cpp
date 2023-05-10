@@ -26,24 +26,37 @@ int knapSack(int W, int wt[], int val[], int n)
                 K[i][w] = K[i - 1][w];
         }
     }
-    for(int i=0; i<n+1; i++){
-    	for(int j=0; j<w+1; j++){
-    		cout<<K[i][j]<<" ";
-    	}
-    	cout<<endl;
-    }
+//    for(int i=0; i<n+1; i++){
+//    	for(int j=0; j<w+1; j++){
+//    		cout<<K[i][j]<<" ";
+//    	}
+//    	cout<<endl;
+//    }
     return K[n][W];
 }
  
 // Driver Code
 int main()
 {
-    int profit[] = { 60, 100, 120 };
-    int weight[] = { 10, 20, 30 };
-    int W = 50;
-    int n = sizeof(profit) / sizeof(profit[0]);
- 
-    cout << knapSack(W, weight, profit, n);
- 
+	int t, n, W;
+	cin>>t;
+	while(t--){
+		cin>>n>>W;
+		int a[n], c[n]; 
+		for(int i=0; i<n; i++){
+			cin>>a[i];
+		}
+		for(int i=0; i<n; i++){
+			cin>>c[i];
+		}
+		cout<<knapSack(W, a, c, n)<<endl;
+	} 
+//    int profit[] = { 60, 100, 120 };
+//    int weight[] = { 10, 20, 30 };
+//    int W = 50;
+//    int n = sizeof(profit) / sizeof(profit[0]);
+// 
+//    cout << knapSack(W, weight, profit, n);
+// 
     return 0;
 }
